@@ -14,10 +14,13 @@ function calculateProfitAndLoss() {
     if(ip&&qty&&curr) {
         if(ip > curr) {
             calculateLossValues(ip, curr, qty);
+            outputBox.style.color = 'red';
         } else if (curr > ip){
             calculateProfitValues(ip, curr, qty);
+            outputBox.style.color = 'green';
         } else {
-            showOutput("No pain no gain and no gain no pain")
+            showOutput("No pain no gain and no gain no pain");
+            outputBox.style.color = 'grey';
         }
     } else {
         showOutput("Please enter values to calculate!")
@@ -28,6 +31,7 @@ function calculateLossValues(initial, current, quantity) {
     var loss = (initial - current) * quantity;
     var lossPercentage = (loss/initial) * 100;
 
+    
     showOutput(`Hey the loss is ${loss} and the percent is ${lossPercentage.toFixed(2)}%`);
 
 }
@@ -42,4 +46,5 @@ function calculateProfitValues(initial, current, quantity) {
 
 function showOutput (message) {
     outputBox.innerHTML = message;
+    
 }
