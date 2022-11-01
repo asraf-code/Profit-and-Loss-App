@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap");
+
 * {
     padding: 0;
     margin: 0;
@@ -10,11 +12,19 @@
 }
 
 body {
+    font-family: "Work Sans", sans-serif;
     text-align: center;
     display: flex;
     flex-direction: column;
 }
 
+main {
+    border: 2px solid var(--primary-color);
+    border-radius: 0.5rem;
+    margin: 5rem;
+    padding-bottom: 5rem;
+    
+}
 
 h1 {
     text-align: center;
@@ -27,6 +37,7 @@ h1 {
 label {
     display: block;
     padding: 1rem;
+    font-weight: bolder;
 }
 
 input {
@@ -41,7 +52,7 @@ input {
     max-width: 325px;
   }
 
-  #submit-btn {
+#submit-btn {
     background: var(--primary-color);
     border: none;
     color: #fff;
@@ -53,4 +64,10 @@ input {
     margin: auto;
     margin-top: 2rem;
     display: block;
-  }
+}
+
+#output-box {
+    margin-top: 3rem;
+    font-size: 30px;
+}
+
