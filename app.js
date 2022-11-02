@@ -8,9 +8,9 @@ const outputBox = document.querySelector("#output-box");
 submitBtn.addEventListener('click', calculateProfitAndLoss);
 
 function calculateProfitAndLoss() {
-    const ip = initialPrice.value;
-    const qty = stocksQuantity.value;
-    const curr = currentPrice.value;
+    const ip = Number(initialPrice.value);
+    const qty = Number(stocksQuantity.value);
+    const curr = Number(currentPrice.value);
     if(ip&&qty&&curr) {
         if(ip > curr) {
             calculateLossValues(ip, curr, qty);
@@ -19,11 +19,11 @@ function calculateProfitAndLoss() {
             calculateProfitValues(ip, curr, qty);
             outputBox.style.color = 'green';
         } else {
-            showOutput("No pain no gain and no gain no pain");
+            showOutput("No pain no gain and no gain no pain😎");
             outputBox.style.color = 'grey';
         }
     } else {
-        showOutput("Please enter values to calculate!")
+        showOutput("Please enter values to calculate❗❓")
     }
 }
 
@@ -32,7 +32,7 @@ function calculateLossValues(initial, current, quantity) {
     var lossPercentage = (loss/initial) * 100;
 
     
-    showOutput(`Hey the loss is ${loss} and the percent is ${lossPercentage.toFixed(2)}%`);
+    showOutput(`Oh my! The loss is ${loss} and the percent is ${lossPercentage.toFixed(2)}% 🐻`);
 
 }
 
@@ -40,7 +40,7 @@ function calculateProfitValues(initial, current, quantity) {
     var profit = (current - initial) * quantity;
     var profitPercentage = (profit/initial) * 100;
 
-    showOutput(`Hey the loss is ${profit} and the percent is ${profitPercentage.toFixed(2)}%`);
+    showOutput(`Yay the profit is ${profit} and the percent is ${profitPercentage.toFixed(2)}% 💸`);
 
 }
 
