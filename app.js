@@ -29,7 +29,7 @@ function calculateProfitAndLoss() {
 
 function calculateLossValues(initial, current, quantity) {
     var loss = (initial - current) * quantity;
-    var lossPercentage = (loss/initial) * 100;
+    var lossPercentage = ((initial - current)/initial) * 100;
 
     
     showOutput(`Oh my! The loss is ${loss} and the percent is ${lossPercentage.toFixed(2)}% 🐻`);
@@ -38,7 +38,7 @@ function calculateLossValues(initial, current, quantity) {
 
 function calculateProfitValues(initial, current, quantity) {
     var profit = (current - initial) * quantity;
-    var profitPercentage = (profit/initial) * 100;
+    var profitPercentage = ((current-initial)/initial) * 100;
 
     showOutput(`Yay the profit is ${profit} and the percent is ${profitPercentage.toFixed(2)}% 💸`);
 
