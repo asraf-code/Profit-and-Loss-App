@@ -32,7 +32,7 @@ function calculateLossValues(initial, current, quantity) {
     var lossPercentage = ((initial - current)/initial) * 100;
 
     
-    showOutput(`Oh my! The loss is ${loss} and the percent is ${lossPercentage.toFixed(2)}% 🐻`);
+    showOutput(`Oh my! The loss is ${loss} and the loss percent is ${lossPercentage.toFixed(2)}% 🐻`);
 
 }
 
@@ -40,7 +40,7 @@ function calculateProfitValues(initial, current, quantity) {
     var profit = (current - initial) * quantity;
     var profitPercentage = ((current-initial)/initial) * 100;
 
-    showOutput(`Yay the profit is ${profit} and the percent is ${profitPercentage.toFixed(2)}% 💸`);
+    showOutput(`Yay the profit is ${profit} and the profit percent is ${profitPercentage.toFixed(2)}% 💸`);
 
 }
 
